@@ -1,17 +1,25 @@
-
 function renderCircles(circles) {
     // HINT: You probably need to write a for loop!
-    //       Or, if you're feeling fancy, use .map() 
-    return `
+    //       Or, if you're feeling fancy, use .map()
+    var outputArray = [];
+    for (i=0; i<circles.length; i++){
+
+    var circle = `
         <div class="text-center mt-5">
-            <code>${JSON.stringify(circles)}</code>
+        <div style="background-color: ${circles[i].color};
+        height: ${circles[i].radius}px;
+        width: ${circles[i].radius}px;
+        border-radius: ${circles[i].radius}px">
+       </div>
         </div>
     `
+    outputArray.push(circle);
+    }
+    return outputArray.join("");
 }
-
+console.log(circles);
 function circles() {
     var content = document.getElementById('content');
-
     var circlesAbstraction = [
         {
             radius: 50,
@@ -30,7 +38,8 @@ function circles() {
             color: "#000000"
         },
     ];
-
     content.innerHTML = renderCircles(circlesAbstraction);
-
 }
+
+
+
