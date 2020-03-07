@@ -1,11 +1,21 @@
 
 function renderStudents(students) {
-    return `
-        <div class="text-center mt-5">
-            <code>${JSON.stringify(students)}</code>
+    var roll = [];
+    for (var i = 0; i < students.length; i++) {
+        var rollCall = `
+     <div class="text-center mt-5" style="max-width: 12rem;">
+        <div class="card bg-light ">
+            <div>${students[i].name}</div>
+            <div>${students[i].isPresent}</div>
         </div>
-    `
+     </div>
+ `
+        roll.push(rollCall);
+    }
+    return roll.join("");
 }
+
+
 
 function students() {
     var content = document.getElementById('content');

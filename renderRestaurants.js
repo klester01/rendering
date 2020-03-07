@@ -2,12 +2,27 @@
 function renderRestaurants(restaurants) {
     // HINT: You can use <img /> tags that point to these playing card images: 
     // https://commons.wikimedia.org/wiki/Category:SVG_playing_cards
-    return `
-        <div class="text-center mt-5">
-            <code>${JSON.stringify(restaurants)}</code>
+
+    var rest = [];
+    for (var i = 0; i < restaurants.length; i++) {
+
+        var reviews = `
+        
+        <div class="text-left mt-3" style="max-width: 12rem;">
+            <div class="card bg-light ">
+                <div style="color:black;font-weight:bold;font-size:30px;"/>${restaurants[i].name}</div>
+                <div style="color:gray;"/>${restaurants[i].type}</div>
+                <div style="color:green;"/>${restaurants[i].priceRating}</div>
+            </div>
         </div>
-    `
+`
+        rest.push(reviews);
+
+    }
+
+    return rest.join("");
 }
+
 
 function restaurants() {
     var content = document.getElementById('content');

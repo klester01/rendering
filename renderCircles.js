@@ -2,18 +2,18 @@ function renderCircles(circles) {
     // HINT: You probably need to write a for loop!
     //       Or, if you're feeling fancy, use .map()
     var outputArray = [];
-    for (i=0; i<circles.length; i++){
+    for (i = 0; i < circles.length; i++) {
 
-    var circle = `
+        var circle = `
         <div class="text-center mt-5">
-        <div style="background-color: ${circles[i].color};
-        height: ${circles[i].radius}px;
-        width: ${circles[i].radius}px;
-        border-radius: ${circles[i].radius}px">
-       </div>
+            <div style="background-color: ${circles[i].color};
+                height: ${circles[i].radius}px;
+                width: ${circles[i].radius}px;
+                border-radius: ${circles[i].radius}px">
+            </div>
         </div>
     `
-    outputArray.push(circle);
+        outputArray.push(circle);
     }
     return outputArray.join("");
 }
