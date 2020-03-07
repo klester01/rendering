@@ -34,7 +34,7 @@ function restaurants() {
             priceRating: 1
         },
         {
-            name: "Gunshow",
+            name: "Aubrey's Pub",
             type: "Date Night Dining",
             priceRating: 5
         },
